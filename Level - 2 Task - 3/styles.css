@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background:linear-gradient(-25deg, #4262e0, #f46641) ;
+    font-family: sans-serif;
+}
+::placeholder {
+    color: white;
+    opacity: 1; 
+  }
+.heading{
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.container{
+    position: relative;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.placing{
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.addTask{
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+}
+
+.addTask > input[type="text"]{
+    width: 90%;
+    color: white;
+    border: none;
+    border-bottom: 2px solid #4262e0;
+    background: none;
+    padding: 10px;
+    font-size: 22px;
+    outline: none;
+}
+
+.addTask button{
+    margin: 0 10px;
+    background: #222;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.notCompleted, .Completed{
+    margin: 5px 0;
+    padding: 20px;
+}
+
+h3{
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffffb9;
+}
+
+ol{
+    list-style: none;
+}
+
+ol li{
+    width: 100%;
+    padding: 18px;
+    margin: 5px 0;
+    background: #e96969bb;
+    font-size: 22px;
+    counter-increment: my-counter;
+}
+
+ol.notCompleted li{
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+ol.Completed li{
+    background: #e96969bb;
+    color: whitesmoke;
+    font-weight: 500;
+
+}
+
+button i{
+    color: white ;
+}
+
+li button{
+    float: right;
+    padding: 8px;
+    font-size: 28px;
+    line-height: 28px;
+    margin-right:5px;
+    background: none;
+    border:none;
+    outline: none;
+    cursor: pointer;
+}
+
+ol li::before{
+    content: counter(my-counter);
+    background: #4262e0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 2rem;
+    text-align: center;
+    color: #fff;
+    margin-right: 0.5rem;
+}
